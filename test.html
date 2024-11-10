@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .resource-select {
+  position: relative;
+  width: 145px;
+}
+
+.selected {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.selected img {
+  width: 30px;
+}
+
+.options {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 99;
+    width: 100%;
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.option:hover {
+    background-color: #ddd;
+}
+
+.options-hide {
+  display: none;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="resource-select">
+    <div class="selected">Resource</div>
+    <div class="options options-hide">
+      <div class="option">
+        <img src="lumber-icon.png">
+        Lumber
+      </div>
+      <div class="option">
+        <img src="gold-icon.png">
+        Gold
+      </div>
+      <div class="option">
+        <img src="grain-icon.png">
+        Grain
+      </div>
+      <div class="option">
+        <img src="ore-icon.png">
+        Ore
+      </div>
+      <div class="option">
+        <img src="sheep-icon.png">
+        Sheep
+      </div>
+      <div class="option">
+        <img src="brick-icon.png">
+        Brick
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.selected').addEventListener('click', function() {
+    this.nextElementSibling.classList.toggle('options-hide');
+  });
+
+document.querySelectorAll('.option').forEach(item => {
+    item.addEventListener('click', function() {
+        const selected = document.querySelector('.selected');
+        selected.innerHTML = this.innerHTML;
+        this.parentElement.classList.add('options-hide');
+    });
+});
+
+// Close the dropdown if clicked outside
+document.addEventListener('click', function(event) {
+    if (!event.target.matches('.selected')) {
+        const dropdowns = document.querySelectorAll('.options');
+        dropdowns.forEach(dropdown => dropdown.classList.add('options-hide'));
+    }
+});
+  </script>
+</body>
+</html>
