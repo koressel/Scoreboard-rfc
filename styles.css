@@ -105,18 +105,16 @@ body {
   
   #status-color-scout {
     height: 60px;
-    margin-top: -61px;
-    margin-right: 0px;
+    margin: -61px auto 0 auto;
     width: 140px;
-    float: right;
+    /* float: left; */
     border-bottom-left-radius: 12px;
   }
   #status-color-taylor {
     height: 60px;
-    margin-top: -61px;
-    margin-right: 0px;
+    margin: -61px auto 0 auto;
     width: 145px;
-    float: right;
+    /* float: left; */
     border-bottom-right-radius: 11px;
   }
   
