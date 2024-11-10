@@ -1,9 +1,9 @@
-var svValue = 0;
+    var svValue = 2;
     var ssValue = 0;
     var sskValue = 0;
     var spValue = 0;
     var scValue = 0;
-    var tvValue = 0;
+    var tvValue = 2;
     var tsValue = 0;
     var tskValue = 0;
     var tpValue = 0;
@@ -54,7 +54,7 @@ var svValue = 0;
           sv.innerHTML = svValue;
           break;
         case(97):
-          if (svValue > 0) {
+          if (svValue > 2) {
             svValue--;
             sv.innerHTML = svValue;
           }
@@ -110,7 +110,7 @@ var svValue = 0;
           tv.innerHTML = tvValue;
           break;
         case(59):
-          if (tvValue > 0) {
+          if (tvValue > 2) {
             tvValue--;
             tv.innerHTML = tvValue;
           }
