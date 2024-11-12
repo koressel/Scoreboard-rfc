@@ -44,6 +44,11 @@ body {
   #header {
     height: 90px;
   }
+
+  /* Spacing fix for player names */
+  #header th {
+    padding-top: 20px;
+  }
   
   td {
     /* border: 1px solid white; */
